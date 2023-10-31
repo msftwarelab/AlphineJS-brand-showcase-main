@@ -1,0 +1,19 @@
+.u-container {
+  max-width: rem(1200px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-bg-light-grey {
+  background: var(--light-grey);
+}
+
+.u-bg-dark-grey {
+  background: var(--dark-grey);
+}

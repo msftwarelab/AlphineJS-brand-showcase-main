@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(e=>{Papa.parse("../feed/feed.csv",{header:!0,download:!0,dynamicTyping:!0,complete:function(e){console.log(e),e.data}})}));

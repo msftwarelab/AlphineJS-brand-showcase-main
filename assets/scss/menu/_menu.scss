@@ -1,0 +1,140 @@
+.menu {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(18px);
+  padding-bottom: rem(1px);
+  margin: 0;
+
+  @include mq($from: tablet-2) {
+    grid-template-columns: auto auto auto;
+    gap: rem(12px);
+  }
+
+  @include mq($from: desktop-1) {
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: rem(12px);
+  }
+
+  label {
+    font-family: var(--shell-heavy);
+    line-height: 1;
+    padding: rem(18px) rem(20px);
+    border-radius: rem(7px);
+    display: block;
+    width: 100%;
+    @include fluid-type(320px, 1024px, 15px, 15px);
+    // text-align: center;
+  }
+
+  &--digital {
+    background: var(--yellow);
+    color: var(--black);
+
+    span.checkmark {
+      border-color: var(--black);
+
+      &:after {
+        border: solid black;
+        border-width: 0 rem(2px) rem(2px) 0;
+      }
+    }
+  }
+
+  &--print {
+    background: var(--dark-blue);
+    color: var(--white);
+  }
+
+  &--film {
+    background: var(--green);
+    color: var(--white);
+  }
+
+  &--events {
+    background: var(--orange);
+    color: var(--white);
+  }
+
+  &--merchandise {
+    background: var(--purple);
+    color: var(--white);
+  }
+
+  &--social {
+    background: var(--light-blue);
+    color: var(--white);
+  }
+}
+
+// Checbox hack
+.container-check {
+  display: block;
+  position: relative;
+  padding-left: rem(35px);
+  // margin-bottom: rem(12px);
+  cursor: pointer;
+  font-size: rem(22px);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* Hide the browser's default checkbox */
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  input:checked ~ .checkmark {
+    background-color: transparent;
+  }
+
+  input:checked ~ .checkmark {
+    background-color: transparent;
+  }
+
+  /* On mouse-over, add a grey background color */
+  :hover input ~ .checkmark {
+    background-color: transparent;
+  }
+
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 32%;
+    right: rem(20px);
+    height: rem(20px);
+    width: rem(20px);
+    background-color: transparent;
+    border: rem(2px) solid var(--white);
+    pointer-events: none;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkmark:after {
+    left: rem(6px);
+    top: rem(3px);
+    width: rem(5px);
+    height: rem(8px);
+    border: solid white;
+    border-width: 0 rem(2px) rem(2px) 0;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+  }
+}

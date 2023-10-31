@@ -1,0 +1,32 @@
+.pagination-wrapper {
+  display: flex;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  // padding-top: rem(30px);
+  margin-top: 0;
+  padding-bottom: rem(60px);
+  list-style: none;
+  gap: rem(10px);
+  padding-left: 0;
+
+  li {
+    button {
+      border: 1px solid #bbbbbb;
+      border-radius: rem(5px);
+      padding: rem(17px) rem(21px);
+      font-family: var(--shell-bold);
+      line-height: 1;
+      font-size: 1rem;
+    }
+  }
+
+  [aria-current="true"] {
+    background: var(--red);
+    border: 1px solid var(--red);
+    color: var(--white);
+  }
+}
