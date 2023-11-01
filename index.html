@@ -1,164 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brand Memories</title>
-    <link href="/css/styles-min.css" rel="stylesheet" type="text/css">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  </head>
-  <body>
-    <div class="u-bg-light-grey">
-      <div class="intro u-container">
-        <h2 class="u-text-center">Brand best practice showcase</h2>
-        <p class="u-text-center">Click to view real projects that reveal how to make best use of our Brand Expression 2.0.</p>
-        <h3 class="u-text-center">Filter projects by application</h3>
-      </div>
-      <div class="u-container">
-        <ul class="menu">
-          <li>
-            <label class="container-check menu--digital" for="digital">
-            Digital
-            <input type="checkbox" id="digital"  value="digital">
-            <span class="checkmark" aria-hidden="true"></span>
-            </label>
-          </li>
-          <li>
-            <label class="container-check menu--print" for="print">
-            Print
-            <input type="checkbox" id="print" value="print">
-            <span class="checkmark" aria-hidden="true"></span>
-            </label>
-          </li>
-          <li>
-            <label class="container-check menu--film" for="film">
-            Film and Animation
-            <input type="checkbox" id="film" value="film">
-            <span class="checkmark" aria-hidden="true"></span>
-            </label>
-          </li>
-          <li>
-            <label class="container-check menu--events" for="events">
-          Events and Experiential
-            <input type="checkbox" id="events" value="events">
-            <span class="checkmark" aria-hidden="true"></span>
-            </label>
-          </li>
-          <li>
-            <label class="container-check menu--merchandise" for="merchandise">
-            Merchandise
-            <input type="checkbox" id="merchandise" value="merchandise">
-            <span class="checkmark" aria-hidden="true"></span>
-            </label>
-          </li>
-          <li>
-            <label class="container-check menu--social" for="social">
-            Social Media
-            <input type="checkbox" id="social" value="social">
-            <span class="checkmark" aria-hidden="true"></span>
-            </label>
-          </li>
-        </ul>
-      </div>
-      <div class="u-container brand-showcase-results">
-        <button class="brand-showcase-results--print" data-micromodal-trigger="modal-1">
-          <span class="brand-showcase-results__img">
-          <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="text">
-          </span>
-          <span class="brand-showase-results__title">
-            <h2>Shell Scenarios Visual Identity Playbook</h2>
-          </span>
-        </button>
-        <button class="brand-showcase-results--digital">
-          <span class="brand-showcase-results__img">
-          <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="text">
-          </span>
-          <span class="brand-showase-results__title">
-            <h2>Poster for Branded shop</h2>
-          </span>
-        </button>
-        <button class="brand-showcase-results--film">
-          <span class="brand-showcase-results__img">
-          <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="text">
-          </span>
-          <span class="brand-showase-results__title">
-            <h2>Poster for Branded shop</h2>
-          </span>
-        </button>
-        <button class="brand-showcase-results--events">
-          <span class="brand-showcase-results__img">
-          <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="text">
-          </span>
-          <span class="brand-showase-results__title">
-            <h2>Poster for Branded shop</h2>
-          </span>
-        </button>
-        <button class="brand-showcase-results--social">
-          <span class="brand-showcase-results__img">
-          <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="text">
-          </span>
-          <span class="brand-showase-results__title">
-            <h2>Poster for Branded shop</h2>
-          </span>
-        </button>
-        <button class="brand-showcase-results--merchandise">
-          <span class="brand-showcase-results__img">
-          <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="text">
-          </span>
-          <span class="brand-showase-results__title">
-            <h2>Poster for Branded shop</h2>
-          </span>
-        </button>
-      </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brand Memories</title>
+  <link href="./css/styles-min.css" rel="stylesheet" type="text/css">
+  <link href="./css/styles.css" rel="stylesheet" type="text/css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="feedData">
+  <div class="u-bg-light-grey">
+    <div class="intro u-container">
+      <h2 class="u-text-center">Brand best practice showcase</h2>
+      <p class="u-text-center">Click to view real projects that reveal how to make best use of our Brand Expression 2.0.
+      </p>
+      <h3 class="u-text-center">Filter projects by application</h3>
     </div>
-    <div class="u-bg-light-grey">
-      <nav class="u-container pagination-wrapper" aria-label="Pagination Navigation">
-      <ul class="pagination">
-        <li class="page-item"><button class="page-link"  aria-label="Goto Page 1" aria-current="true">1</button></li>
-        <li class="page-item"><button class="page-link"  aria-label="Goto Page 2">2</button></li>
-        <li class="page-item"><button class="page-link" aria-label="Goto Page 3">3</button></li>
-        <li class="page-item"><button class="page-link"  aria-label="Goto Page 4">4</button></li>
-        <li class="page-item"><button class="page-link"  aria-label="Goto Page 5">5</button></li>
-        <li class="page-item"><button class="page-link" aria-label="Goto Page 6">6</button></li>
+    <div class="u-container">
+      <ul class="menu">
+        <li>
+          <label class="container-check menu--digital" for="digital">
+            Digital
+            <input type="checkbox" id="digital" value="Digital" x-model="categoryFilter">
+            <span class="checkmark" aria-hidden="true"></span>
+          </label>
+        </li>
+        <li>
+          <label class="container-check menu--print" for="print">
+            Print
+            <input type="checkbox" id="print" value="Print" x-model="categoryFilter">
+            <span class="checkmark" aria-hidden="true"></span>
+          </label>
+        </li>
+        <li>
+          <label class="container-check menu--film" for="film">
+            Film and Animation
+            <input type="checkbox" id="film" value="Film and animation" x-model="categoryFilter">
+            <span class="checkmark" aria-hidden="true"></span>
+          </label>
+        </li>
+        <li>
+          <label class="container-check menu--events" for="events">
+            Events and Experiential
+            <input type="checkbox" id="events" value="Events and experiential" x-model="categoryFilter">
+            <span class="checkmark" aria-hidden="true"></span>
+          </label>
+        </li>
+        <li>
+          <label class="container-check menu--merchandise" for="merchandise">
+            Merchandise
+            <input type="checkbox" id="merchandise" value="Merchandise" x-model="categoryFilter">
+            <span class="checkmark" aria-hidden="true"></span>
+          </label>
+        </li>
+        <li>
+          <label class="container-check menu--social" for="social">
+            Social Media
+            <input type="checkbox" id="social" value="Social" x-model="categoryFilter">
+            <span class="checkmark" aria-hidden="true"></span>
+          </label>
+        </li>
       </ul>
     </div>
-    <!-- Modals -->
-    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container  modal--digital" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-          <header class="modal__header">
-            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-          </header>
-          <main class="modal__content" id="modal-1-content">
-            <div class="modal__col">
-              <div class="modal__image-grid">
-                <img src="/imgs/shell.jpg" alt="text">
-                <img src="/imgs/shell.jpg" alt="text">
-                <img src="/imgs/shell.jpg" alt="text">
-                <img src="/imgs/shell.jpg" alt="text">
-              </div>
+    <div class="u-container brand-showcase-results">
+      <template x-for="item in filteredResults">
+        <button x-show="categoryFilter.length === 0 || categoryFilter.includes(item['Application category'])"
+          x-bind:class="{
+            'brand-showcase-results--print': item['Application category'] === 'Print',
+            'brand-showcase-results--digital': item['Application category'] === 'Digital',
+            'brand-showcase-results--film': item['Application category'] === 'Film and animation',
+            'brand-showcase-results--events': item['Application category'] === 'Events and experiential',
+            'brand-showcase-results--social': item['Application category'] === 'Social',
+            'brand-showcase-results--merchandise': item['Application category'] === 'Merchandise',
+          }" x-on:click="openModal(item)">
+          <span class="brand-showcase-results__img">
+            <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="text">
+          </span>
+          <span class="brand-showase-results__title">
+            <h2 x-text="item['Project name']"></h2>
+          </span>
+        </button>
+      </template>
+    </div>
+  </div>
+  <div class="u-bg-light-grey">
+    <nav class="u-container pagination-wrapper" aria-label="Pagination Navigation">
+      <ul class="pagination">
+      <template x-for="page in totalPages">
+        <li class="page-item">
+          <button @click="setCurrentPage(page)" class="page-link" :aria-current="currentPage === page ? true : false" x-text="page"></button>
+        </li>
+      </template>
+    </ul>
+  </div>
+  <!-- Modals -->
+  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container  modal--digital" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <div class="modal__col">
+            <div class="modal__image-grid">
+              <img src="./imgs/shell.jpg" alt="text">
+              <img src="./imgs/shell.jpg" alt="text" id="modal__support-media-1">
+              <img src="./imgs/shell.jpg" alt="text" id="modal__support-media-2">
+              <img src="./imgs/shell.jpg" alt="text" id="modal__support-media-3">
             </div>
-            <div class="modal__col">
-              <h2>Shell Scenarios Visual Identity Playbook</h2>
-              <span>Digital</span>
-              <span>Digital</span>
-              <span>Digital</span>
-              <blockquote>
-                <p>"A fantastic example of key elements of the brand expression creating highly accessible communication. From typography, to visualised data this online report puts usability at the heart of its design system."</p>
-              </blockquote>
-              <ul>
-                <li><span>Agency:</span> Fourleaf</li>
-                <li><span>Webiste Link:</span> <a href="https://www.bbc.co.uk/">https://www.bbc.co.uk/</a></li>
-                <li><span>For queries relating to this project contact <a href="https://www.bbc.co.uk/">askBrand</a></span></li>
-              </ul>
-            </div>
-          </main>
-        </div>
+          </div>
+          <div class="modal__col">
+            <h2 id="modal__project-name">Shell Scenarios Visual Identity Playbook</h2>
+            <span id="modal__project-category">Digital</span>
+            <blockquote>
+              <p id="modal__project-quote">"A fantastic example of key elements of the brand expression creating highly accessible communication.
+                From typography, to visualised data this online report puts usability at the heart of its design
+                system."</p>
+            </blockquote>
+            <ul>
+              <li id="modal__project-agency"><span>Agency:</span> Fourleaf</li>
+              <li id="modal__project-website-link"><span>Webiste Link:</span> <a href="https://www.bbc.co.uk/">https://www.bbc.co.uk/</a></li>
+              <li><span>For queries relating to this project contact <a
+                    href="https://www.bbc.co.uk/">askBrand</a></span></li>
+            </ul>
+          </div>
+        </main>
       </div>
     </div>
-    <script src="/assets/js/papaparse.min.js"></script>
-    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-    <script>MicroModal.init();</script>
-    <script src="/assets/js/main-min.js"></script>
-  </body>
+  </div>
+  <script src="./assets/js/papaparse.min.js"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  <script>MicroModal.init();</script>
+  <script src="./assets/js/main-min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>
